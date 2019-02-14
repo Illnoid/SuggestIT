@@ -6,6 +6,17 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:#d2d2d2;
+}
+
+#matrixCanvas {
+  background-color: #FFFFFF;
+  display:block;
+  margin:auto;
+}
+
+#logo {
+  display:none;
 }
 
 code {

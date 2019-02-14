@@ -6,12 +6,10 @@ from flask import Flask, request, jsonify
 from flask_restful import Resource, Api
 from pony.orm import db_session, ObjectNotFound, commit
 
-from flask_cors import CORS
-
 app = Flask(__name__)
 api = Api(app)
 
-cors = CORS(app, resources={r"/*": {"origins":"*"}})
+app.config.setdefault('WTF_CSRF_METHODS', [])
 
 @db_session
 def add_new_suggestion(title_inp, text_inp, author_inp):
